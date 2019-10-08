@@ -1,8 +1,8 @@
 <?php
+
 namespace Rossjcooper\LaravelAmazonProducts;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Rossjcooper\LaravelAmazonProducts\API;
 use Amazon\ProductAdvertisingAPI\v1\Configuration;
 use GuzzleHttp\Client;
 
@@ -21,10 +21,11 @@ class ServiceProvider extends BaseServiceProvider
 			$config->setHost(config('amazon_products.host', 'webservices.amazon.com'));
 			$config->setRegion(config('amazon_products.region', 'us-east-1'));
 			$client = new Client();
-			
+
 			return new API($client, $config);
 		});
 	}
+
 	/**
 	 * Perform post-registration booting of services.
 	 */

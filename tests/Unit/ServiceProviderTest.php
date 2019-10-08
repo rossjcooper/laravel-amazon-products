@@ -7,8 +7,8 @@ use Rossjcooper\LaravelAmazonProducts\API;
 use Rossjcooper\LaravelAmazonProducts\Facades\API as APIFacade;
 use Rossjcooper\LaravelAmazonProducts\Tests\TestCase;
 
-class ServiceProviderTest extends TestCase {
-	
+class ServiceProviderTest extends TestCase
+{
 	public function test_service_provider_bindings()
 	{
 		$api = app(API::class);
@@ -23,4 +23,3 @@ class ServiceProviderTest extends TestCase {
 		$this->assertInstanceOf(DefaultApi::class, $api);
 	}
 }
-

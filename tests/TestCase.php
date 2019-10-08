@@ -1,4 +1,5 @@
 <?php
+
 namespace Rossjcooper\LaravelAmazonProducts\Tests;
 
 use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
@@ -14,6 +15,7 @@ abstract class TestCase extends OrchTestCase
 	{
 		return [ServiceProvider::class];
 	}
+
 	/**
 	 * Loads in our package .env file.
 	 */
