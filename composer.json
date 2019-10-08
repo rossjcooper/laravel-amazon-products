@@ -1,0 +1,42 @@
+{
+    "name": "rossjcooper/laravel-amazon-products",
+    "description": "A Laravel wrapper for the Amazon Products API SDK",
+    "type": "library",
+    "license": "apache-2.0",
+    "authors": [
+        {
+            "name": "Ross Cooper",
+            "email": "therossjcooper@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rossjcooper\\LaravelAmazonProducts\\": "src/",
+            "Rossjcooper\\LaravelAmazonProducts\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "rossjcooper/paapiphpsdk": "^1.0",
+        "illuminate/support": ">=5.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": ">=3.4",
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rossjcooper\\LaravelAmazonProducts\\ServiceProvider"
+            ],
+            "aliases": {
+                "HubSpot": "Rossjcooper\\LaravelAmazonProducts\\Facades\\API"
+            }
+        }
+    },
+    "keywords": [
+        "laravel",
+        "hubspot",
+        "api",
+        "service"
+    ]
+}
