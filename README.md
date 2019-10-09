@@ -1,6 +1,6 @@
 # Amazon Products API SDK Wrapper for Laravel
 
-[![Build Status](https://travis-ci.org/rossjcooper/laravel-amazon-products.svg?branch=master)](https://travis-ci.org/rossjcooper/laravel-amazon-products)
+[![Build Status](https://travis-ci.org/rossjcooper/laravel-amazon-products.svg?branch=master)](https://travis-ci.org/rossjcooper/laravel-amazon-products) [![Latest Stable Version](https://poser.pugx.org/rossjcooper/laravel-amazon-products/v/stable)](https://packagist.org/packages/rossjcooper/laravel-amazon-products) [![Total Downloads](https://poser.pugx.org/rossjcooper/laravel-amazon-products/downloads)](https://packagist.org/packages/rossjcooper/laravel-amazon-products) [![License](https://poser.pugx.org/rossjcooper/laravel-amazon-products/license)](https://packagist.org/packages/rossjcooper/laravel-amazon-products)
 
 This is a wrapper for the [rossjcooper/paapiphpsdk](https://github.com/rossjcooper/paapiphpsdk) package and gives the user a Service Container binding and facade a configured instance of the `Amazon\ProductAdvertisingAPI\v1\com\amazon\paapi5\v1\api\DefaultApi` class.
 
