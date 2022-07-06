@@ -16,7 +16,7 @@
         }
     },
     "require": {
-        "rossjcooper/paapiphpsdk": "^1.0",
+        "rossjcooper/paapiphpsdk": "^1.0|^2.0",
         "illuminate/support": ">=5.3"
     },
     "require-dev": {
