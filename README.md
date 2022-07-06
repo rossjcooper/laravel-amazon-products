@@ -6,7 +6,7 @@ This is a wrapper for the [rossjcooper/paapiphpsdk](https://github.com/rossjcoop
 
 ## Installation
 1. `composer require rossjcooper/laravel-amazon-products`
-2. Laravel 5.4 or earlier, in your `config/app.php` file:
+2. For Laravel 5.4 or earlier, in your `config/app.php` file:
     - Add `Rossjcooper\LaravelAmazonProducts\ServiceProvider::class` to your providers array in `config/app.php`.
     - Add `'AmazonProductsAPI' => Rossjcooper\LaravelAmazonProducts\Facades\API::class` to your aliases array in `config/app.php`.
 3. `php artisan vendor:publish --provider="Rossjcooper\LaravelAmazonProducts\ServiceProvider" --tag="config"` will create a `config/amazon_products.php` file.
@@ -14,6 +14,30 @@ This is a wrapper for the [rossjcooper/paapiphpsdk](https://github.com/rossjcoop
 ```
 AMAZON_PRODUCTS_ACCESS_KEY=youAccessKey
 AMAZON_PRODUCTS_PRIVATE_KEY=youPrivateKey
+```
+5. Optionally update your host and region values in the `config/amazon_products.php` file.
+
+## Usage
+
+```php
+public function handle(\Rossjcooper\LaravelAmazonProducts\API $api)
+{
+     $request = new SearchItemsRequest();
+        $request->setSearchIndex('All');
+        $request->setKeywords('Harry Potter');
+        $request->setResources([
+            SearchItemsResource::ITEM_INFOTITLE,
+            SearchItemsResource::OFFERSLISTINGSPRICE,
+        ]);
+        $request->setPartnerTag(config('mypartnertag'));
+        $request->setPartnerType(config('Associates'));
+
+        $response = $api->searchItems($request);
+
+        foreach($response->getSearchResult()->getItems() as $item) {
+            //...
+        }
+}
 ```
 
 For more info on using the actual SDK see the main repo [rossjcooper/paapiphpsdk](https://github.com/rossjcooper/paapiphpsdk)
