@@ -33,7 +33,7 @@ class ServiceProvider extends BaseServiceProvider
 	{
 		// config
 		$this->publishes([
-			__DIR__.'/config/amazon_products.php' => config_path('amazon_products.php'),
+			__DIR__.'/../config/amazon_products.php' => config_path('amazon_products.php'),
 		], 'config');
 	}
 }
